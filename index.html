@@ -3,53 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramos & Cía. Wealth / Advisory</title>
+    <title>Ramos & Cía. Wealth / Advisory | Asesoría Patrimonial y Seguros</title>
     <style>
-        :root { --primary: #0f172a; --accent: #2563eb; }
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #334; background: #f1f5f9; margin: 0; }
-        .hero { background: var(--primary); color: white; padding: 3rem 1rem; text-align: center; }
-        .logo { max-width: 200px; margin-bottom: 1rem; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 2rem; }
-        .btn { display: inline-block; padding: 1rem 2rem; margin: 0.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; color: white; transition: 0.3s; }
-        .btn-wa { background: #25d366; }
-        .btn-mail { background: var(--accent); }
-        iframe { width: 100%; border: none; min-height: 600px; }
+        :root {
+            --primary: #0b1329;
+            --accent: #2563eb;
+            --gold: #d4af37;
+            --text-main: #334155;
+            --bg-light: #f8fafc;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.7;
+        }
+        /* Cabecera de impacto con el logo abarcando la zona oscura */
+        .hero {
+            background-color: var(--primary);
+            color: white;
+            padding: 2.5rem 1rem 3.5rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+        .hero img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            display: block;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 6px;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+        }
+        .hero p {
+            color: #93c5fd;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+        .container {
+            max-width: 900px;
+            margin: -2rem auto 3rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+        }
+        .card {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--accent);
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 0.75rem;
+        }
+        .intro-text {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-bottom: 1.5rem;
+        }
+        .success-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            color: #166534;
+        }
+        iframe {
+            width: 100%;
+            border: none;
+            min-height: 650px;
+            border-radius: 8px;
+            background: #fff;
+        }
+        .contact-section {
+            text-align: center;
+            background: linear-gradient(135deg, #0b1329 0%, #1e293b 100%);
+            color: white;
+            border-top: 4px solid var(--gold);
+        }
+        .contact-section h2 {
+            color: white;
+            border-bottom: 2px solid #334155;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-wa { background-color: #25d366; }
+        .btn-wa:hover { background-color: #20ba5a; transform: translateY(-2px); }
+        .btn-mail { background-color: var(--accent); }
+        .btn-mail:hover { background-color: #1d4ed8; transform: translateY(-2px); }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #070d1d;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
     <header class="hero">
-        <!-- Asegúrate de tener una imagen llamada logo.png en tu repositorio -->
-        <img src="logo.png" alt="Logo Ramos & Cía" class="logo">
+        <!-- Tu logo expandido abarcando con elegancia la zona superior -->
+        <img src="logo.png" alt="Ramos & Cía. Wealth / Advisory Logo">
         <h1>Ramos & Cía. Wealth / Advisory</h1>
-        <p>Tu futuro financiero, diseñado a tu medida.</p>
+        <p>Ing. Leonardo Ramos | Asesor Patrimonial y de Seguros</p>
     </header>
 
     <div class="container">
+        
         <div class="card">
             <h2>Protección y Crecimiento Financiero</h2>
-            <p>Bienvenido. Ayudamos a individuos y empresas a blindar su patrimonio mediante estrategias financieras inteligentes.</p>
+            <p class="intro-text">Bienvenido a nuestro espacio de consultoría patrimonial de alto nivel. Ayudamos a individuos y empresas a blindar su patrimonio, planificar su futuro económico y asegurar la estabilidad de sus seres queridos mediante estrategias financieras inteligentes, optimización de capital y planes de seguros personalizados.</p>
+            
+            <h3 style="color: var(--primary); margin-top: 1.5rem;">Nuestros Pilares de Servicio:</h3>
+            <ul>
+                <li><strong>Asesoría Patrimonial Estratégica:</strong> Diseños a la medida para la conservación, blindaje y multiplicación de tu capital a largo plazo.</li>
+                <li><strong>Seguros de Vida y Retiro:</strong> Programas de previsión y blindaje financiero diseñados para garantizar tu tranquilidad y la de tu familia.</li>
+                <li><strong>Optimización de Inversiones:</strong> Enfoques analíticos basados en instrumentos sólidos (como portafolios eficientes y fondos indexados) para hacer trabajar tu dinero de forma inteligente.</li>
+            </ul>
         </div>
 
         <div class="card">
-            <h2>Diagnóstico Personalizado</h2>
-            <p>¡Hola! Si llegaste hasta aquí por curiosidad, estás en el lugar correcto.</p>
-            <p>En Ramos & Cía. creemos que nadie debería tomar decisiones a ciegas. Tómate menos de 2 minutos para responder estas breves preguntas. Prepararemos un diagnóstico 100% hecho a tu medida.</p>
+            <h2>Diagnóstico Financiero Personalizado</h2>
+            <p class="intro-text">¡Hola! Si llegaste hasta aquí por curiosidad, estás en el lugar correcto.</p>
+            <p class="intro-text">En <strong>Ramos & Cía.</strong> creemos que nadie debería tomar decisiones sobre su dinero, su salud o su retiro a ciegas o con textos prefabricados. Tómate menos de 2 minutos para responder estas breves preguntas. Con tus respuestas, mi equipo y yo prepararemos un diagnóstico 100% hecho a tu medida para nuestra primera sesión de acompañamiento.</p>
             
+            <!-- Formulario integrado -->
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScGv2tYzpnadHZGgsa24wEU-vpuwPrZ-sfY14slOTl_t_PJqA/viewform?embedded=true">Cargando…</iframe>
             
-            <p><strong>¡Listo! Recibimos tus respuestas.</strong></p>
-            <p>En Ramos & Cía. ya nos pusimos a trabajar. En breve, revisaremos tus respuestas para preparar un análisis sincero y 100% adaptado a ti. Estamos listos para acompañarte paso a paso.</p>
+            <div class="success-box">
+                <p style="margin: 0 0 0.5rem 0; font-weight: bold;">¡Listo! Recibimos tus respuestas.</p>
+                <p style="margin: 0;">En Ramos & Cía. ya nos pusimos a trabajar. En breve, un miembro de nuestro equipo o tu servidor revisaremos tus respuestas para preparar un análisis sincero, claro y 100% adaptado a ti. No importa en qué punto de tu camino financiero te encuentres hoy, estamos listos para acompañarte paso a paso.</p>
+            </div>
         </div>
 
-        <div class="card" style="text-align: center;">
+        <div class="card contact-section">
             <h2>Contacto Directo</h2>
-            <a href="https://wa.me/525584459844" class="btn btn-wa">WhatsApp</a>
-            <a href="mailto:LeoEpp360@gmail.com" class="btn btn-mail">Correo Electrónico</a>
+            <p>Da el primer paso hacia tu libertad y estabilidad financiera hoy mismo.</p>
+            <div class="btn-container">
+                <a href="https://wa.me/525584459844" class="btn btn-wa" target="_blank">📱 WhatsApp Directo</a>
+                <a href="mailto:LeoEpp360@gmail.com" class="btn btn-mail">✉️ Correo Electrónico</a>
+            </div>
         </div>
+
     </div>
 
-    <footer><p style="text-align:center;">&copy; 2026 Ramos & Cía. Wealth / Advisory</p></footer>
+    <footer>
+        <p>&copy; 2026 Ramos & Cía. Wealth / Advisory. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
